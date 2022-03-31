@@ -59,6 +59,7 @@ body{
 }
 
 .wrapper-list ul.list .check{
+    position: relative;
     background-color: #404a6e;
     border-radius: 50%;
     display: block;
@@ -68,10 +69,28 @@ body{
     cursor: pointer;
     transition: background-color 200ms ease;
 }
+.wrapper-list ul.list .done .task{
+    text-decoration: line-through;
+}
 
-.wrapper-list ul.list .check:hover{
+.wrapper-list ul.list .check:hover,
+.wrapper-list ul.list .done .check
+{
     background-color: #172d37;
 }
+
+.wrapper-list ul.list .done .check:after{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #008000;
+}
+
 
 .wrapper-list button.remove{
     position: absolute;
